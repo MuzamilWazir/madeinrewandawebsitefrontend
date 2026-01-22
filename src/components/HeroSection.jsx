@@ -10,7 +10,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-primary/80 "></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-5xl mx-auto text-center text-accent px-4  space-y-4">
+      <div className="relative z-10  flex flex-col items-center  pt-28 h-full max-w-5xl mx-auto text-center text-accent px-4  space-y-7">
         <h1 className="text-secondary text-6xl font-bold mx-30 ">
           Made in Rwanda Powered by Our People{" "}
         </h1>
@@ -21,17 +21,20 @@ function HeroSection() {
           (MINICOM)
         </p>
 
-        <div className="space-x-5 text-primary ">
-          <button className=" rounded-full font-semibold bg-accent p-2 px-3 text-xs ">
-            Explore Rwandan Products
-          </button>
-          <button className=" rounded-full font-semibold bg-secondary p-2 px-4 text-xs ">
-            List Your Product
-          </button>
+        <div className="space-y-6">
+          <div className="space-x-5 text-primary ">
+            <button className=" rounded-full font-semibold bg-accent p-2 px-3 text-xs ">
+              Explore Rwandan Products
+            </button>
+            <button className=" rounded-full font-semibold bg-secondary p-2 px-4 text-xs ">
+              List Your Product
+            </button>
+          </div>
+          <p className="text-sm text-white">
+            An initiative aligned with the Ministry of Trade & Industry
+            (MINICOM)
+          </p>
         </div>
-        <p className="text-sm text-white">
-          An initiative aligned with the Ministry of Trade & Industry (MINICOM)
-        </p>
       </div>
     </div>
   );
