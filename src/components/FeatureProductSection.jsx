@@ -71,7 +71,7 @@ function FeatureProductSection() {
           ))}
         </div>
         <p className="text-primary font-bold ">
-          <Link href="/home">
+          <Link href="/product-catagories">
             View More Product <FaArrowRight className="inline" />
           </Link>{" "}
         </p>

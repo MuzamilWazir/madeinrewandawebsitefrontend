@@ -1,5 +1,7 @@
 import { Potta_One, Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const pottaOne = Potta_One({
   subsets: ["latin"],
@@ -22,7 +24,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${pottaOne.variable} ${poppins.variable} antialiased`}>
+        <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
