@@ -38,7 +38,7 @@ function DiscoverSection() {
           {Cards.map((data, key) => (
             <div
               key={key}
-              className="relative w-55 h-80 rounded-2xl overflow-hidden border border-primary shadow-sm shadow-primary group cursor-pointer"
+              className="relative w-55 h-70 rounded-2xl overflow-hidden border border-primary shadow-sm shadow-primary group cursor-pointer"
             >
               <Image
                 src={data.image}
@@ -57,6 +57,10 @@ function DiscoverSection() {
             </div>
           ))}
         </div>
+        <p className="text-primary font-bold ">
+          {" "}
+          Every product on this platform is proudly made in Rwanda.
+        </p>
       </div>
     </div>
   );
