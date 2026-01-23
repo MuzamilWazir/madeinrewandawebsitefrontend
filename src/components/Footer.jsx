@@ -28,7 +28,6 @@ function Footer() {
   return (
     <footer className="bg-primary text-accent mt-10 font-poppins">
       <div className="flex flex-col md:flex-row items-center justify-between mx-auto max-w-7xl px-8 py-10 gap-6 text-sm">
-        {/* Brand Section */}
         <div className="space-y-8 max-w-sm">
           <h2 className="font-potta text-2xl text-secondary">Made in Rwanda</h2>
           <p>
@@ -38,9 +37,7 @@ function Footer() {
           <p>Supported by the Ministry of Trade & Industry (MINICOM).</p>
         </div>
 
-        {/* Links Container */}
-        <div className="md:flex gap-20">
-          {/* Important Links Column */}
+        <div className="flex gap-20">
           <div className="w-full sm:w-70">
             <h2 className={titleStyles}>Important Links</h2>
             {IMPORTANT_LINKS.map((link) => (
@@ -50,7 +47,6 @@ function Footer() {
             ))}
           </div>
 
-          {/* Media Center Column */}
           <div>
             <h2 className={titleStyles}>Media Center</h2>
             {MEDIA_LINKS.map((link) => (

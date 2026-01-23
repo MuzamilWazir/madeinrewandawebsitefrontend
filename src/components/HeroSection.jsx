@@ -3,7 +3,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div
-      className="relative bg-cover bg-center h-screen font-poppins"
+      className="relative bg-cover bg-center h-125 sm:h-150 md:h-162.5 lg:h-175 font-poppins"
       style={{ backgroundImage: "url('/banner.png')" }}
     >
       <div className="absolute inset-0 bg-primary/80" />
@@ -13,7 +13,7 @@ const HeroSection = () => {
           Made in Rwanda Powered by Our People
         </h1>
 
-        <p className="text-white text-center  text-base sm:text-lg md:text-xl max-w-5xl font-thin leading-relaxed">
+        <p className="text-white text-center  text-base sm:text-lg md:text-xl max-w-5xl font-thin leading-relaxed ">
           The official digital marketplace showcasing authentic Rwandan
           products—empowering local producers and connecting them to national
           and global markets, with support from the Ministry of Trade & Industry
