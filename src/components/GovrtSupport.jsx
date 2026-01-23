@@ -31,7 +31,7 @@ const SUPPORT_CARDS = [
 
 const BackgroundLogo = ({ position }) => (
   <div
-    className={`absolute ${position} top-80 -translate-y-1/2 pointer-events-none opacity-55`}
+    className={`absolute ${position} top-80 -translate-y-1/2 pointer-events-none opacity-55 hidden lg:block`}
   >
     <Image
       src="/backlogo.png"
@@ -46,34 +46,34 @@ const BackgroundLogo = ({ position }) => (
 function GovrtSupport() {
   return (
     <div className="relative bg-accent overflow-hidden">
-      <div className="max-w-6xl mx-auto text-center py-10">
+      <div className="max-w-6xl mx-auto text-center py-10 px-4 sm:px-6 lg:px-8">
         <Heading
           heading="Government Support for Local Businesses"
           subHeading="The Government of Rwanda is actively enabling local producers to grow, compete, and succeed in the digital economy."
         />
-        
-        <div className="grid grid-cols-3 gap-8 mx-20 my-4">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mx-4 sm:mx-8 lg:mx-20 my-4">
           {SUPPORT_CARDS.map(({ id, title, description, icon: Icon }) => (
             <div
               key={id}
               className="p-6 bg-primary rounded-xl shadow-sm border border-secondary shadow-secondary space-y-2"
             >
               <div className="flex items-center justify-center p-3 my-3">
-                <Icon className="text-3xl bg-accent rounded-full text-primary mb-4 p-3 size-23" />
+                <Icon className="text-3xl bg-accent rounded-full text-primary mb-4 p-3 w-20 h-20" />
               </div>
 
               <h4 className="text-xl mb-2 font-semibold text-secondary my-3">
                 {title}
               </h4>
-              
-              <p className="leading-relaxed text-secondary text-xs my-2 mx-5">
+
+              <p className="leading-relaxed text-secondary text-xs my-2  ">
                 {description}
               </p>
             </div>
           ))}
         </div>
 
-        <h4 className="pt-4 font-bold text-xl text-primary">
+        <h4 className="pt-4 font-bold text-lg sm:text-xl text-primary px-4">
           Supported by the Ministry of Trade & Industry (MINICOM)
         </h4>
       </div>
