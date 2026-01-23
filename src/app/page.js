@@ -1,3 +1,4 @@
+import BuildByRwanda from "@/components/BuildByRwanda";
 import Footer from "@/components/Footer";
 import GovrtSupport from "@/components/GovrtSupport";
 import HeroSection from "@/components/HeroSection";
@@ -10,6 +11,7 @@ const page = () => {
       <Navbar />
       <HeroSection />
       <GovrtSupport />
+      <BuildByRwanda/>
       <Footer />
     </div>
   );
