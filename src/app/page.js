@@ -4,6 +4,7 @@ import FeatureProductSection from "@/components/FeatureProductSection";
 import Footer from "@/components/Footer";
 import GovrtSupport from "@/components/GovrtSupport";
 import HeroSection from "@/components/HeroSection";
+import Implementer from "@/components/Implementer";
 import Navbar from "@/components/Navbar";
 import RealImpact from "@/components/RealImpact";
 import WhyChoseSection from "@/components/WhyChoseSection";
@@ -18,7 +19,8 @@ const page = () => {
       <DiscoverSection />
       <FeatureProductSection />
       <RealImpact />
-      <WhyChoseSection/>
+      <WhyChoseSection />
+      <Implementer />
     </div>
   );
 };

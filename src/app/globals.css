@@ -13,5 +13,6 @@
 @layer base {
   body {
     @apply font-poppins; /* Applies Poppins to the whole app */
+    @apply bg-accent;
   }
 }
