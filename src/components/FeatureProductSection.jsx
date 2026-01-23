@@ -45,7 +45,7 @@ function FeatureProductSection() {
   return (
     <div className="relative bg-accent overflow-hidden">
       <div className="max-w-6xl mx-auto text-center py-10">
-        <Heading heading="Discover What Rwanda Creates" />
+        <Heading heading="Featured Local Products" />
 
         <div className="grid grid-cols-5 gap-4 text-accent my-10 ">
           {Cards.map((data, key) => (
