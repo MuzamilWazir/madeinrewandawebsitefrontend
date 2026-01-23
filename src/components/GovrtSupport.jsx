@@ -1,23 +1,24 @@
+"use client";
 import React from "react";
 import { FaShield } from "react-icons/fa6";
-import { BiSolidMobileVibration } from "react-icons/bi";
-import { BiSolidShoppingBags } from "react-icons/bi";
-const Cards = [
+import { BiSolidMobileVibration, BiSolidShoppingBags } from "react-icons/bi";
+import Image from "next/image";
+import Heading from "./Heading";
+
+const SUPPORT_CARDS = [
   {
     id: 1,
     title: "Policy & Protection",
     description:
       "Fair trade policies and producer-focused regulations designed to protect and promote Rwandan-made products.",
     icon: FaShield,
-    supportedBy: "MINICOM",
   },
   {
     id: 2,
     title: "Digital Enablement",
     description:
-      "Equipping local producers with digital tools and skills to thrive in the modern e-commerce landscape.",
+      "Supporting businesses to go online, reach wider audiences, and scale through digital platforms.",
     icon: BiSolidMobileVibration,
-    supportedBy: "MINICOM",
   },
   {
     id: 3,
@@ -25,40 +26,60 @@ const Cards = [
     description:
       "Opening doors to local and international buyers through a trusted national marketplace.",
     icon: BiSolidShoppingBags,
-    supportedBy: "MINICOM",
   },
 ];
+
+const BackgroundLogo = ({ position }) => (
+  <div
+    className={`absolute ${position} top-80 -translate-y-1/2 pointer-events-none opacity-55`}
+  >
+    <Image
+      src="/backlogo.png"
+      alt="Decorative background logo"
+      width={180}
+      height={100}
+      className="object-contain"
+    />
+  </div>
+);
+
 function GovrtSupport() {
   return (
-    <div className="bg-accent ">
-      <div className="max-w-7xl mx-auto text-center py-10">
-        <h2 className="text-5xl font-bold text-primary  ">
-          Government Support for Local Businesses
-        </h2>
-        <p className="my-5">
-          The Government of Rwanda is actively enabling local producers to grow,
-          compete, and succeed in the digital economy.
-        </p>
-
-        <div>
-          <div className="grid grid-cols-3 gap-6 ">
-            {Cards.map(({ title, description, icon: Icon, id }) => (
-              <div
-                key={id}
-                className="p-6 bg-primary rounded-xl shadow-sm border border-secondary shadow-secondary"
-              >
-                <div className="bg-white rounded-full w-13 mx-auto ">
-                  <Icon className="text-3xl text-primary mb-4 p-2 size-13 " />
-                </div>
-
-                <h4 className="text-xl font-bold mb-2">{title}</h4>
-                <p className="text-gray-600 leading-relaxed">{description}</p>
+    <div className="relative bg-accent overflow-hidden">
+      <div className="max-w-6xl mx-auto text-center py-10">
+        <Heading
+          heading="Government Support for Local Businesses"
+          subHeading="The Government of Rwanda is actively enabling local producers to grow, compete, and succeed in the digital economy."
+        />
+        
+        <div className="grid grid-cols-3 gap-8 mx-20 my-4">
+          {SUPPORT_CARDS.map(({ id, title, description, icon: Icon }) => (
+            <div
+              key={id}
+              className="p-6 bg-primary rounded-xl shadow-sm border border-secondary shadow-secondary space-y-2"
+            >
+              <div className="flex items-center justify-center p-3 my-3">
+                <Icon className="text-3xl bg-accent rounded-full text-primary mb-4 p-3 size-23" />
               </div>
-            ))}
-            <h4></h4>
-          </div>
+
+              <h4 className="text-xl mb-2 font-semibold text-secondary my-3">
+                {title}
+              </h4>
+              
+              <p className="leading-relaxed text-secondary text-xs my-2 mx-5">
+                {description}
+              </p>
+            </div>
+          ))}
         </div>
+
+        <h4 className="pt-4 font-bold text-xl text-primary">
+          Supported by the Ministry of Trade & Industry (MINICOM)
+        </h4>
       </div>
+
+      <BackgroundLogo position="-left-20" />
+      <BackgroundLogo position="-right-20" />
     </div>
   );
 }
