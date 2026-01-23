@@ -6,6 +6,7 @@ import GovrtSupport from "@/components/GovrtSupport";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import RealImpact from "@/components/RealImpact";
+import WhyChoseSection from "@/components/WhyChoseSection";
 import React from "react";
 
 const page = () => {
@@ -17,6 +18,7 @@ const page = () => {
       <DiscoverSection />
       <FeatureProductSection />
       <RealImpact />
+      <WhyChoseSection/>
     </div>
   );
 };
