@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import GovrtSupport from "@/components/GovrtSupport";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
+import RealImpact from "@/components/RealImpact";
 import React from "react";
 
 const page = () => {
@@ -15,6 +16,7 @@ const page = () => {
       <BuildByRwanda />
       <DiscoverSection />
       <FeatureProductSection />
+      <RealImpact />
     </div>
   );
 };

@@ -34,7 +34,7 @@ const Navbar = () => {
           ))}
         </div>{" "}
         <div className="">
-          <button className="  text-xs md:text-sm hover:bg-accent flex  gap-2 hover:text-primary border border-accent px-4 py-2 rounded-full font-poppins text-sm">
+          <button className="  text-xs md:text-sm hover:bg-accent flex  gap-2 hover:text-primary border border-accent px-4 py-2 rounded-full font-poppins ">
             <p> Register in Rwanda</p>
             <Image
               src="/flage.png"
