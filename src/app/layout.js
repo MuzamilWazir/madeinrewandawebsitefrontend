@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Implementer from "@/components/Implementer";
+import Script from "next/script";
 
 const pottaOne = Potta_One({
   subsets: ["latin"],
@@ -25,10 +26,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${pottaOne.variable} ${poppins.variable} antialiased`}>
-        <Navbar/>
+        <Navbar />
         {children}
-        <Implementer/>
-        <Footer/>
+        <Implementer />
+        <Footer />
       </body>
     </html>
   );
