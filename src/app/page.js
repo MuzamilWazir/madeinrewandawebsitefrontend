@@ -20,7 +20,6 @@ const page = () => {
       <FeatureProductSection />
       <RealImpact />
       <WhyChoseSection />
-      <Implementer />
     </div>
   );
 };
