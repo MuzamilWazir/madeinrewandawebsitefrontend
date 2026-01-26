@@ -47,10 +47,18 @@ const Navbar = () => {
         </div>
 
         <div className="hidden sm:block">
-          <button className="text-xs md:text-sm hover:bg-accent flex gap-2 hover:text-primary border border-accent px-4 py-2 rounded-full font-poppins transition-colors duration-300">
-            <span>Register in Rwanda</span>
-            <Image src="/flage.png" alt="Rwanda Flag" width={20} height={20} />
-          </button>
+          <a href="/register">
+            {" "}
+            <button className="text-xs md:text-sm hover:bg-accent flex gap-2 hover:text-primary border border-accent px-4 py-2 rounded-full font-poppins transition-colors duration-300">
+              <span>Register in Rwanda</span>
+              <Image
+                src="/flage.png"
+                alt="Rwanda Flag"
+                width={20}
+                height={20}
+              />
+            </button>
+          </a>
         </div>
 
         <button
@@ -77,15 +85,17 @@ const Navbar = () => {
               </li>
             ))}
             <li className="pt-2">
-              <button className="w-full flex items-center justify-center text-sm hover:bg-accent gap-2 hover:text-primary border border-accent px-4 py-2 rounded-full font-poppins transition-colors duration-300">
-                <span>Register in Rwanda</span>
-                <Image
-                  src="/flage.png"
-                  alt="Rwanda Flag"
-                  width={20}
-                  height={20}
-                />
-              </button>
+              <a href="/register">
+                <button className="w-full flex items-center justify-center text-sm hover:bg-accent gap-2 hover:text-primary border border-accent px-4 py-2 rounded-full font-poppins transition-colors duration-300">
+                  <span>Register in Rwanda</span>
+                  <Image
+                    src="/flage.png"
+                    alt="Rwanda Flag"
+                    width={20}
+                    height={20}
+                  />
+                </button>
+              </a>
             </li>
           </ul>
         </div>
