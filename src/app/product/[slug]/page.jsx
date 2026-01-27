@@ -1,3 +1,4 @@
+import Product from "@/components/Product";
 import React from "react";
 
 const data = [
@@ -99,7 +100,8 @@ const CheeseCard = ({ product }) => {
   );
 };
 
-function page() {
+function page({params}) {
+  const slug = params;
   return (
     <div className="max-w-6xl mx-auto space-y-5">
       <div className="p-8 flex flex-col gap-6">
@@ -112,7 +114,7 @@ function page() {
         <h2 className="text-primary text-4xl font-bold  "> You May Also like </h2>
 
         <div>
-          
+          <Product/>
         </div>
       </div>
     </div>
