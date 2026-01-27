@@ -84,11 +84,11 @@ function page() {
           <div className="flex flex-col gap-3 sm:gap-4">
             {contactData.map((item) => (
               <div key={item.id} className="flex items-start gap-3">
-                <div className="bg-secondary p-2 rounded-full text-primary text-lg flex-shrink-0">
+                <div className="bg-secondary p-2 rounded-full text-primary text-lg shrink-0">
                   {iconMap[item.iconName]}
                 </div>
 
-                <div className="text-[#1A3C34] pt-1 break-words">
+                <div className="text-[#1A3C34] pt-1 wrap-break-word">
                   <span className="font-bold">{item.label}: </span>
                   <span className="font-normal">{item.value}</span>
                 </div>
@@ -118,13 +118,13 @@ function page() {
           />
 
           <div className="w-full flex gap-2">
-            <div className="relative flex-shrink-0">
+            <div className="relative shrink-0">
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="h-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-white shadow shadow-primary text-emerald-900 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer flex items-center gap-1.5 sm:gap-2 whitespace-nowrap"
               >
-                <div className="bg-primary p-1 rounded-full flex-shrink-0">
+                <div className="bg-primary p-1 rounded-full shrink-0">
                   <span className={`fi fi-${selectedCountry.flag} text-xs`}></span>
                 </div>
 
@@ -145,7 +145,7 @@ function page() {
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute top-full mt-1 left-0 min-w-[140px] shadow-primary bg-white rounded-2xl shadow-lg z-10 overflow-hidden">
+                <div className="absolute top-full mt-1 left-0 min-w-35 shadow-primary bg-white rounded-2xl shadow-lg z-10 overflow-hidden">
                   {countries.map((country) => (
                     <button
                       key={country.code}
@@ -204,7 +204,7 @@ function page() {
                 type="checkbox"
                 name="agreed"
                 id="agreed"
-                className="mt-1 sm:mt-0 mx-2 sm:mx-3 flex-shrink-0"
+                className="mt-1 sm:mt-0 mx-2 sm:mx-3 shrink-0"
               />
               <label htmlFor="agreed" className="text-xs sm:text-sm text-black">
                 I agree with
