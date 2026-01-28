@@ -1,11 +1,13 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Heading from "./Heading";
+import Link from "next/link";
 
 const Cards = [
   {
     id: 1,
     title: "Yogurt",
+    slug: "yogurt",
     brand: "Masaka Farms Greek",
     category: "Dairy Products",
     image: "/FeaturesProduct/image01.png",
@@ -13,6 +15,7 @@ const Cards = [
   {
     id: 2,
     title: "Cheese",
+    slug: "cheese",
     brand: "Nganji Mozzarella Cheese",
     category: "Dairy Products",
     image: "/FeaturesProduct/image02.png",
@@ -20,6 +23,7 @@ const Cards = [
   {
     id: 3,
     title: "Honey",
+    slug: "honey",
     brand: "Pure Honey",
     category: "Pure Honey",
     image: "/FeaturesProduct/image03.png",
@@ -27,6 +31,7 @@ const Cards = [
   {
     id: 4,
     title: "Pineapple juice",
+    slug: "pineapple-juice",
     brand: "Inyange Pineapple",
     category: "Pineapple juice",
     image: "/FeaturesProduct/image04.png",
@@ -34,6 +39,7 @@ const Cards = [
   {
     id: 5,
     title: "Amaco paints",
+    slug: "amaco-paints",
     brand: "AMACO PAINTS Ltd",
     category: "Amaco paints",
     image: "/FeaturesProduct/image05.png",
@@ -48,7 +54,8 @@ function FeatureProductSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4 my-10">
           {Cards.map((data, key) => (
-            <div
+            <Link
+              href={`product/${data.slug}`}
               key={key}
               className="relative w-full h-64 sm:h-72 md:h-60 rounded-2xl overflow-hidden border border-primary  shadow-sm shadow-primary group cursor-pointer"
             >
@@ -65,7 +72,7 @@ function FeatureProductSection() {
                 <p className="text-xs">{data.category}</p>
                 <p className="text-xs">{data.brand}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <p className="text-primary font-bold">
