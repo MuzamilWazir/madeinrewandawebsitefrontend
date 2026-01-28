@@ -5,7 +5,7 @@ import Link from "next/link";
 function Product() {
   return (
     <div className="grid grid-cols-4 gap-3 my-5">
-      {ProductData.map((data, index) => (
+      {ProductData.slice(0,8).map((data, index) => (
         <div
           key={index}
           className="flex items-center justify-between flex-col text-center space-y-2 border border-primary rounded-3xl shadow shadow-primary p-5"
