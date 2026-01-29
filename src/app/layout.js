@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${pottaOne.variable} ${poppins.variable} antialiased`}>
         <Navbar />
-        {children}
+        <div className="pt-16">{children}</div>
+
         <Implementer />
         <Footer />
       </body>
