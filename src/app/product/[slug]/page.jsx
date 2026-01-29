@@ -7,7 +7,7 @@ const CheeseCard = ({ product }) => {
     <div className="w-full max-w-5xl mx-auto bg-[#0d2e24] text-white rounded-2xl shadow-xl overflow-hidden">
       <div className="flex flex-col md:flex-row h-auto md:h-105">
         {/* Image Container - Absolutely Fixed dimensions */}
-        <div className="bg-white p-6 rounded-xl m-6 flex items-center justify-center w-[calc(100%-3rem)] md:w-95 h-95 md:h-92 flex-shrink-0 overflow-hidden">
+        <div className="bg-white p-6 rounded-xl m-6 flex items-center justify-center w-[calc(100%-3rem)] md:w-95 h-95 md:h-92 shrink-0 overflow-hidden">
           <div className="w-full h-full flex items-center justify-center">
             <img
               src={product.image_url}
