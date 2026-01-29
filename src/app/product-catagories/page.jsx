@@ -123,9 +123,9 @@ const page = () => {
   }, [filters.province, uniqueData.districts]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br  flex items-start p-4 gap-4 mx-4">
+    <div className="min-h-screen bg-linear-to-br flex items-start p-4 gap-4 mx-4">
       {/* Filter Panel */}
-      <div className="w-60 bg-gradient-to-b from-amber-50 to-yellow-50 rounded-lg shadow-lg p-5 border border-amber-200 sticky top-4 flex-shrink-0">
+      <div className="w-60 bg-linear-to-b from-amber-50 to-yellow-50 rounded-lg shadow-lg p-5 border border-amber-200 sticky top-4 shrink-0">
         <h2 className="text-base font-bold text-gray-800 mb-3">Filters</h2>
 
         <div className="space-y-2">

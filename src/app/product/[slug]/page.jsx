@@ -4,88 +4,88 @@ import { ProductData } from "../../../../lib/ProductData";
 
 const CheeseCard = ({ product }) => {
   return (
-<div className="w-full max-w-5xl mx-auto bg-[#0d2e24] text-white rounded-2xl shadow-xl overflow-hidden">
-  <div className="flex flex-col md:flex-row h-auto md:h-105">
-    {/* Image Container - Absolutely Fixed dimensions */}
-    <div className="bg-white p-6 rounded-xl m-6 flex items-center justify-center w-[calc(100%-3rem)] md:w-[380px] h-[380px] md:h-[368px] flex-shrink-0 overflow-hidden">
-      <div className="w-full h-full flex items-center justify-center">
-        <img
-          src={product.image_url}
-          alt={product.product_name}
-          className="max-w-[280px] max-h-[280px] w-auto h-auto object-contain"
-        />
-      </div>
-    </div>
-
-    {/* Content Container - Fixed structure */}
-    <div className="flex-1 flex flex-col p-6 pt-0 md:pt-6 md:pr-8 justify-between min-w-0">
-      {/* Top Section */}
-      <div className="space-y-3">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#e1d7b7] line-clamp-2">
-          {product.product_name}
-        </h2>
-        
-        <div className="space-y-1.5 text-sm text-[#e1d7b7]">
-          <p className="truncate">
-            <span className="font-semibold text-white">Company Name:</span>{" "}
-            {product.company_name}
-          </p>
-          <p className="truncate">
-            <span className="font-semibold text-white">District:</span>{" "}
-            {product.location.district}
-          </p>
-          <p className="truncate">
-            <span className="font-semibold text-white">Phone:</span>{" "}
-            {product.contact.phone}
-          </p>
-          <p className="truncate">
-            <span className="font-semibold text-white">Email:</span>{" "}
-            {product.contact.email}
-          </p>
-          <p className="truncate">
-            <span className="font-semibold text-white">Cluster:</span>{" "}
-            {product.classification.cluster}
-          </p>
-          <p className="truncate">
-            <span className="font-semibold text-white">Sector:</span>{" "}
-            {product.location.sector}
-          </p>
-        </div>
-      </div>
-
-      {/* Bottom Section - Fixed position */}
-      <div className="space-y-4 mt-6">
-        <div className="grid grid-cols-2 gap-6 pt-4 text-sm border-t border-[#1a4d3d] text-[#e1d7b7]">
-          <div>
-            <p className="uppercase tracking-wide font-bold text-white mb-1 text-xs">
-              Approval Date
-            </p>
-            <p className="truncate">{product.status_info.approval_date}</p>
-          </div>
-          <div>
-            <p className="uppercase tracking-wide font-bold text-white mb-1 text-xs">
-              Expiry Date
-            </p>
-            <p className="truncate">{product.status_info.expiry_date}</p>
+    <div className="w-full max-w-5xl mx-auto bg-[#0d2e24] text-white rounded-2xl shadow-xl overflow-hidden">
+      <div className="flex flex-col md:flex-row h-auto md:h-105">
+        {/* Image Container - Absolutely Fixed dimensions */}
+        <div className="bg-white p-6 rounded-xl m-6 flex items-center justify-center w-[calc(100%-3rem)] md:w-[380px] h-[380px] md:h-[368px] flex-shrink-0 overflow-hidden">
+          <div className="w-full h-full flex items-center justify-center">
+            <img
+              src={product.image_url}
+              alt={product.product_name}
+              className="max-w-70 max-h-70 w-auto h-auto object-contain"
+            />
           </div>
         </div>
 
-        <div className="inline-block bg-[#e1d7b7] px-4 py-2 rounded-lg text-[#0d2e24] font-bold text-xs uppercase">
-          Validity Status:{" "}
-          <span
-            className={`${
-              product.status_info.validity_status === "Valid"
-                ? "text-green-700"
-                : "text-red-600"
-            }`}
-          >
-            {product.status_info.validity_status}
-          </span>
+        {/* Content Container - Fixed structure */}
+        <div className="flex-1 flex flex-col p-6 pt-0 md:pt-6 md:pr-8 justify-between min-w-0">
+          {/* Top Section */}
+          <div className="space-y-3">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#e1d7b7] line-clamp-2">
+              {product.product_name}
+            </h2>
+
+            <div className="space-y-1.5 text-sm text-[#e1d7b7]">
+              <p className="truncate">
+                <span className="font-semibold text-white">Company Name:</span>{" "}
+                {product.company_name}
+              </p>
+              <p className="truncate">
+                <span className="font-semibold text-white">District:</span>{" "}
+                {product.location.district}
+              </p>
+              <p className="truncate">
+                <span className="font-semibold text-white">Phone:</span>{" "}
+                {product.contact.phone}
+              </p>
+              <p className="truncate">
+                <span className="font-semibold text-white">Email:</span>{" "}
+                {product.contact.email}
+              </p>
+              <p className="truncate">
+                <span className="font-semibold text-white">Cluster:</span>{" "}
+                {product.classification.cluster}
+              </p>
+              <p className="truncate">
+                <span className="font-semibold text-white">Sector:</span>{" "}
+                {product.location.sector}
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom Section - Fixed position */}
+          <div className="space-y-4 mt-6">
+            <div className="grid grid-cols-2 gap-6 pt-4 text-sm border-t border-[#1a4d3d] text-[#e1d7b7]">
+              <div>
+                <p className="uppercase tracking-wide font-bold text-white mb-1 text-xs">
+                  Approval Date
+                </p>
+                <p className="truncate">{product.status_info.approval_date}</p>
+              </div>
+              <div>
+                <p className="uppercase tracking-wide font-bold text-white mb-1 text-xs">
+                  Expiry Date
+                </p>
+                <p className="truncate">{product.status_info.expiry_date}</p>
+              </div>
+            </div>
+
+            <div className="inline-block bg-[#e1d7b7] px-4 py-2 rounded-lg text-[#0d2e24] font-bold text-xs uppercase">
+              Validity Status:{" "}
+              <span
+                className={`${
+                  product.status_info.validity_status === "Valid"
+                    ? "text-green-700"
+                    : "text-red-600"
+                }`}
+              >
+                {product.status_info.validity_status}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
   );
 };
 
@@ -105,11 +105,9 @@ async function page({ params }) {
           <CheeseCard key={item.id} product={item} />
         ))}
       </div>
-      
+
       <div>
-        <h2 className="text-primary text-4xl font-bold">
-          You May Also like
-        </h2>
+        <h2 className="text-primary text-4xl font-bold">You May Also like</h2>
         <div>
           <Product />
         </div>
