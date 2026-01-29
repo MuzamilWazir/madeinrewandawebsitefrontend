@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 function Product() {
   return (
-    <div className="grid grid-cols-4 gap-3 my-5">
+    <div className="grid grid-cols-4 gap-4 my-5">
       {ProductData.slice(0,8).map((data, index) => (
         <div
           key={index}
-          className="flex items-center justify-between flex-col text-center space-y-2 border border-primary rounded-3xl shadow shadow-primary p-5"
+          className="flex items-center justify-between flex-col text-center space-y-2 border border-primary rounded-3xl shadow shadow-primary p-5 transform transition duration-300 ease-in-out hover:scale-105"
         >
           <div className="flex justify-center items-center ">
             <Image
