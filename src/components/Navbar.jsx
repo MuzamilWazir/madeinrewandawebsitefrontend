@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="bg-primary text-accent fixed w-full">
+    <div className="bg-primary text-accent sticky w-full">
       <div className="max-w-7xl mx-auto text-accent flex justify-between items-center px-4 sm:px-8 py-2">
         <div className="flex items-center">
           <Image
