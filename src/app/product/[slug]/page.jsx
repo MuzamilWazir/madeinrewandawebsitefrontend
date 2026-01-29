@@ -5,7 +5,7 @@ import { PiBuildingsBold } from "react-icons/pi";
 import { MdLocationPin } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-
+import { FaIdCard } from "react-icons/fa";
 const CheeseCard = ({ product }) => {
   return (
     <div className="w-full max-w-5xl mx-auto bg-[#0d2e24] text-white rounded-2xl shadow-xl overflow-hidden">
@@ -26,7 +26,7 @@ const CheeseCard = ({ product }) => {
               {product.product_name}
             </h2>
 
-            <div className="space-y-1.5 grid grid-cols-2 text-sm text-[#e1d7b7]">
+            <div className="space-y-6 my-8 grid grid-cols-2  text-[#e1d7b7] ">
               <p className="truncate">
                 <span className="font-semibold text-white">
                   <PiBuildingsBold className="inline text-xl text-accent" />
@@ -46,23 +46,31 @@ const CheeseCard = ({ product }) => {
                 {product.contact.phone}
               </p>
               <p className="truncate">
-                <span className="font-semibold text-white">
+                <span className="font-semibold">
                   <MdEmail className="inline text-xl text-accent" />
                 </span>{" "}
                 {product.contact.email}
               </p>
               <p className="truncate">
-                <span className="font-semibold text-white">Cluster:</span>{" "}
+                <span className="font-semibold ">Cluster:</span>{" "}
                 {product.classification.cluster}
               </p>
               <p className="truncate">
-                <span className="font-semibold text-white">Sector:</span>{" "}
+                <span className="font-semibold ">Sector:</span>{" "}
                 {product.location.sector}
               </p>
             </div>
           </div>
-
-          <div className="space-y-4 mt-6">
+          <div>
+            <p className="text-sm text-accent">
+              <span className="font-semibold ">
+                <FaIdCard className="inline text-xl text-accent mx-2" />
+                License No :
+              </span>{" "}
+              {product.classification.license_no}
+            </p>
+          </div>
+          <div className="space-y-4 mt-2">
             <div className="grid grid-cols-2 gap-6 pt-4 text-sm border-t border-[#1a4d3d] text-[#e1d7b7]">
               <div>
                 <p className="uppercase tracking-wide font-bold text-white mb-1 text-xs">
