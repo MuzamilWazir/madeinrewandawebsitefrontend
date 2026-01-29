@@ -12,7 +12,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <div className="pt-10">
       <HeroSection />
       <GovrtSupport />
       <BuildByRwanda />
